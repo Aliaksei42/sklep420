@@ -134,9 +134,10 @@
   transition: border-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-.nav-menu__lang__btn:first-child {
-  margin-right: 24px;
+.nav-menu__lang__btn + .nav-menu__lang__btn {
+  margin-left: 24px;
 }
+
 
 .nav-menu__lang__btn.lang-active {
   border-color: #9466FF !important;
@@ -283,7 +284,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .nav-menu__logo {
     margin-bottom: 95px;
   }

@@ -16,7 +16,7 @@ export const removeOverflowHiddenFromBody = () => {
   const body = document.querySelector('body') as HTMLBodyElement
   body.classList.remove('overflow-hidden')
 }
-
+// When the menu is opened, OverflowHidden and padding is applied, and padding is removed
 export const addOverflowHiddenToBody = (paddingRight = '') => {
   const body = document.querySelector('body') as HTMLBodyElement
   body.classList.add('overflow-hidden')
