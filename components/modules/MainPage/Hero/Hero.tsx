@@ -34,7 +34,7 @@ const Hero = () => {
     },
   ]
 
-  const handleSlideClick = (e: SwiperType) => e.slideTo(e.clickedIndex)
+  const handleSlideClick = (e: SwiperType) => e.slideTo(e.clickedIndex) // При клике на слайд - он будет становится спереди
 
   return (
     <section className={styles.hero}>

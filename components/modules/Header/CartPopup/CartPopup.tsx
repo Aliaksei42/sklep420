@@ -17,30 +17,31 @@ import { useGoodsByAuth } from '@/hooks/useGoodsByAuth'
 const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
   ({ open, setOpen }, ref) => {
     const { lang, translations } = useLang()
-    const handleShowPopup = () => setOpen(true)
-    const spinner = useUnit(getCartItemsFx.pending)
-    const currentCartByAuth = useGoodsByAuth($cart, $cartFromLs)
-    const { animatedPrice } = useTotalPrice()
+    const handleShowPopup = () => setOpen(true) // Функция для открытия всплывающего окна
+    const spinner = useUnit(getCartItemsFx.pending) // Хук для отображения спиннера во время загрузки
+    const currentCartByAuth = useGoodsByAuth($cart, $cartFromLs) // Хук для получения текущей корзины пользователя
+    const { animatedPrice } = useTotalPrice() // Хук для получения общей суммы покупок
 
-    const handleHidePopup = () => setOpen(false)
+    const handleHidePopup = () => setOpen(false) // Функция для закрытия всплывающего окна
 
     return (
       <div className='cart-popup' ref={ref}>
         <Link
           className='header__links__item__btn header__links__item__btn--cart'
           href='/cart'
-          onMouseEnter={handleShowPopup}
+          onMouseEnter={handleShowPopup}  // При наведении мыши на кнопку открытия окна корзины вызывается функция handleShowPopup
         >
-          {!!currentCartByAuth.length && <span className='not-empty' />}
+          {!!currentCartByAuth.length && <span className='not-empty' />} // Если в корзине есть товары, отображается метка о наличии товаров
         </Link>
         <AnimatePresence>
+        // Если состояние open равно true, отображается всплывающее окно
           {open && (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
               className='cart-popup__wrapper'
-              onMouseLeave={handleHidePopup}
+              onMouseLeave={handleHidePopup} // При уводе мыши с всплывающего окна вызывается функция handleHidePopup для его закрытия
             >
               <span className='cart-popup__arrow' />
               <button
@@ -83,7 +84,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
               <div className='cart-popup__footer'>
                 <div className='cart-popup__footer__inner'>
                   <span>{translations[lang].common.order_price}:</span>
-                  <span>{formatPrice(animatedPrice)} ₽</span>
+                  <span>{formatPrice(animatedPrice)} PLN</span>
                 </div>
                 <Link href='/order' className='cart-popup__footer__link'>
                   {translations[lang].breadcrumbs.order}
