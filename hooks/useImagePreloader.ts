@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+// Пока изображение грузится - отображаем спинер и плавно показываем изображэение
 const useImagePreloader = () => {
   const [imgSpinner, setImgSpinner] = useState(true)
 

@@ -31,10 +31,10 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
           href='/cart'
           onMouseEnter={handleShowPopup}  // При наведении мыши на кнопку открытия окна корзины вызывается функция handleShowPopup
         >
-          {!!currentCartByAuth.length && <span className='not-empty' />} // Если в корзине есть товары, отображается метка о наличии товаров
+          {!!currentCartByAuth.length && <span className='not-empty' />} 
         </Link>
         <AnimatePresence>
-        // Если состояние open равно true, отображается всплывающее окно
+        {/* Если состояние open равно true, отображается всплывающее окно */} 
           {open && (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
