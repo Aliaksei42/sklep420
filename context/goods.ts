@@ -12,7 +12,7 @@ export const MainPageGate = createGate()
 
 export const setCurrentProduct = goods.createEvent<IProduct>()
 export const loadOneProduct = goods.createEvent<ILoadOneProductFx>()
-
+// принимает в себя эффект и в случае успешного ответа - возвращает result
 const goodsStoreInstance = (effect: Effect<void, [], Error>) =>
   goods
     .createStore([])
@@ -29,7 +29,7 @@ const goodsSampleInstance = (
     clock: gate.open,
     target: effect,
   })
-
+// два состояния - новинки и бестселлеры
 export const $newProducts = goodsStoreInstance(getNewProductsFx)
 export const $bestsellerProducts = goodsStoreInstance(getBestsellerProductsFx)
 

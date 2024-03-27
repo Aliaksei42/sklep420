@@ -1,6 +1,6 @@
 import { createEffect } from 'effector'
 import api from './apiInstance'
-
+// возвращают массив данных 
 export const getNewProductsFx = createEffect(async () => {
   const { data } = await api.get('/api/goods/new')
 
