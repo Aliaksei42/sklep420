@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
 import { idGenerator } from '@/lib/utils/common'
 import { IProduct } from '@/types/common'
-
+// слайдер будет работать если картинок меньше 4
+// пока в массиве меньше 4 картинок мы кладем в массив картинку
 export const useProductImages = (product: IProduct) => {
   const images = useMemo(() => {
     const makeImagesObjects = (imagesArray: string[]) =>

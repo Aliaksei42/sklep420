@@ -4,14 +4,14 @@ export interface ILoadOneProductFx {
   productId: string
   category: string
 }
-
+// размеры их наличие
 export interface IProductSizesItemProps {
   currentSize: [string, boolean]
   selectedSize: string
   setSelectedSize: (arg0: string) => void
   currentCartItems: ICartItem[]
 }
-
+// количество товара
 export interface IProductCounterProps {
   className: string
   count: number

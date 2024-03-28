@@ -37,7 +37,7 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
     addToFavoritesSpinner,
     isProductInFavorites,
   } = useFavoritesAction(item)
-
+// При нажатии быстрый просмотр открывается модалка и вешает hidden на body
   const handleShowQuickViewModal = () => {
     addOverflowHiddenToBody()
     showQuickViewModal()
@@ -144,7 +144,7 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
               inStock={+item.inStock}
             />
             <span className={styles.list__item__price}>
-              {formatPrice(+item.price)} ₽
+              {formatPrice(+item.price)} zł
             </span>
           </div>
           {productsWithoutSizes.includes(item.type) ? (

@@ -2,7 +2,8 @@
 import { IProductSizesItemProps } from '@/types/goods'
 import styles from '@/styles/quick-view-modal/index.module.scss'
 import ProductCountBySize from './ProductCountBySize'
-
+// currentSize - это массив размеров
+// добавляем стили на кнопку размера по проверки наличия в массиве
 const ProductSizesItem = ({
   currentSize,
   selectedSize,

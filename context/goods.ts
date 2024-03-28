@@ -35,7 +35,7 @@ export const $bestsellerProducts = goodsStoreInstance(getBestsellerProductsFx)
 
 goodsSampleInstance(getNewProductsFx, MainPageGate)
 goodsSampleInstance(getBestsellerProductsFx, MainPageGate)
-
+// получаем товар который имеется на клиенте или загружаем с сервера
 export const $currentProduct = goods
   .createStore<IProduct>({} as IProduct)
   .on(setCurrentProduct, (_, product) => product)
