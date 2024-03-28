@@ -14,7 +14,7 @@ import { useGoodsByAuth } from '@/hooks/useGoodsByAuth'
 import { addFavoriteItemToLS } from '@/lib/utils/favorites'
 import { useFavoritesAction } from '@/hooks/useFavoritesAction'
 import styles from '@/styles/size-table/index.module.scss'
-
+// При выборе размера - одновременно можем выбрать только один размер чтоб дорбавить в корзину
 const SizeTable = () => {
   const { lang, translations } = useLang()
   const showQuickViewModal = useUnit($showQuickViewModal)

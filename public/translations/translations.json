@@ -158,7 +158,7 @@
     "size_table": {
       "head_circumference": "Head circumference, cm",
       "size": "Size",
-      "russian_size": "Russian size",
+      "russian_size": "Size",
       "manufacturer_size": "Manufacturer size",
       "chest_circumference": "Chest circumference, cm",
       "waist_circumference": "Waist circumference, cm",
@@ -276,7 +276,7 @@
       "cloth": "Одежда",
       "accessories": "Аксесуары",
       "souvenirs": "Сувениры",
-      "office": "Концелярия",
+      "office": "Канцелярия",
       "all": "Весь каталог",
       "about": "О нас",
       "blog": "Блог",
@@ -392,7 +392,7 @@
     "size_table": {
       "head_circumference": "Обхват головы, см",
       "size": "Размер",
-      "russian_size": "Российский размер",
+      "russian_size": "Pазмер",
       "manufacturer_size": "Размер производителя",
       "chest_circumference": "Обхват груди, в см",
       "waist_circumference": "Обхват талии, в см",
@@ -627,7 +627,7 @@
     "size_table": {
       "head_circumference": "Obwód głowy, cm",
       "size": "Rozmiar",
-      "russian_size": "Rozmiar rosyjski",
+      "russian_size": "Rozmiar",
       "manufacturer_size": "Rozmiar producenta",
       "chest_circumference": "Obwód klatki piersiowej, cm",
       "waist_circumference": "Obwód talii, cm",

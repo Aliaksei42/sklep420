@@ -9,6 +9,17 @@
   background-color: #242C39;
   color: rgba(255, 255, 255, .9);
 
+  .size_table__inner {
+    overflow-y: auto; /* Добавляем вертикальную полосу прокрутки */
+    scrollbar-width: thin; /* Ширина полосы прокрутки */
+    scrollbar-color: #9466FF transparent; /* Цвет полосы прокрутки */
+  }
+  
+  .size_table__inner::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+
   @media (max-width: 1070px) {
     width: 780px;
   }
