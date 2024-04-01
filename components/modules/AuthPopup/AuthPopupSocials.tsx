@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faGithub,
   faGoogle,
-  faVk,
-  faYandex,
+  faLinkedin,
+  faFacebook
 } from '@fortawesome/free-brands-svg-icons'
 
 const AuthPopupSocials = ({
@@ -19,22 +19,22 @@ const AuthPopupSocials = ({
       <FontAwesomeIcon icon={faGithub} beat />
     </button>
     <button
+      className='btn-reset socials__btn fb-color'
+      onClick={handleSignupWithOAuth}
+    >
+      <FontAwesomeIcon icon={faFacebook} shake />
+    </button>
+    <button
       className='btn-reset socials__btn g-color'
       onClick={handleSignupWithOAuth}
     >
-      <FontAwesomeIcon icon={faGoogle} shake />
+      <FontAwesomeIcon icon={faGoogle} bounce />
     </button>
     <button
-      className='btn-reset socials__btn y-color'
+      className='btn-reset socials__btn li-color'
       onClick={handleSignupWithOAuth}
     >
-      <FontAwesomeIcon icon={faYandex} bounce />
-    </button>
-    <button
-      className='btn-reset socials__btn vk-color'
-      onClick={handleSignupWithOAuth}
-    >
-      <FontAwesomeIcon icon={faVk} shake />
+      <FontAwesomeIcon icon={faLinkedin} shake />
     </button>
   </div>
 )
