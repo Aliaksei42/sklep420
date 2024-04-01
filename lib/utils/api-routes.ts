@@ -3,7 +3,9 @@ import jwt, { VerifyErrors } from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import { shuffle } from './common'
 import { NextResponse } from 'next/server'
-
+//generateTokens-name + email 10min, refresh 30 day
+//createUserAndGenerateTokens Обращаемся к ДБ и сохраняем User 
+//получаем refresh на клиенте - то что мы сохранили user
 export const getDbAndReqBody = async (
   clientPromise: Promise<MongoClient>,
   req: Request | null

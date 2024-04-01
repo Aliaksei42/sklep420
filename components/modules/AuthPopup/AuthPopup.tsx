@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import AuthPopupRegistration from './AuthPopupRegistration'
 import AuthPopupLogin from './AuthPopupLogin'
-
+//isAuthSwitched - registration or login
+//isSignInActive or isSignupActive
 const AuthPopup = () => {
   const [isAuthSwitched, setIsAuthSwitched] = useState(false)
   const [isSignInActive, setIsSignInActive] = useState(false)
