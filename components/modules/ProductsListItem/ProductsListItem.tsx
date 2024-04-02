@@ -37,7 +37,7 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
     addToFavoritesSpinner,
     isProductInFavorites,
   } = useFavoritesAction(item)
-// При нажатии быстрый просмотр открывается модалка и вешает hidden на body
+
   const handleShowQuickViewModal = () => {
     addOverflowHiddenToBody()
     showQuickViewModal()

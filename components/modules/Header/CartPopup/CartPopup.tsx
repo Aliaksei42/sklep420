@@ -29,19 +29,19 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
         <Link
           className='header__links__item__btn header__links__item__btn--cart'
           href='/cart'
-          onMouseEnter={handleShowPopup}  // При наведении мыши на кнопку открытия окна корзины вызывается функция handleShowPopup
+          onMouseEnter={handleShowPopup}  
         >
           {!!currentCartByAuth.length && <span className='not-empty' />} 
         </Link>
         <AnimatePresence>
-        {/* Если состояние open равно true, отображается всплывающее окно */} 
+
           {open && (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
               className='cart-popup__wrapper'
-              onMouseLeave={handleHidePopup} // При уводе мыши с всплывающего окна вызывается функция handleHidePopup для его закрытия
+              onMouseLeave={handleHidePopup} 
             >
               <span className='cart-popup__arrow' />
               <button
