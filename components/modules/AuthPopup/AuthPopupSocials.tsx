@@ -3,7 +3,7 @@ import {
   faGithub,
   faGoogle,
   faLinkedin,
-  faFacebook
+  faFacebook,
 } from '@fortawesome/free-brands-svg-icons'
 
 const AuthPopupSocials = ({
