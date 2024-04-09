@@ -9,14 +9,14 @@ const CookieAlert = ({
   const { lang, translations } = useLang()
 
   const handleAcceptCookie = () => {
-    document.cookie = 'CookieBy=Rostelecom; max-age=' + 60 * 60 * 24 * 30
+    document.cookie = 'CookieBy=Sklep; max-age=' + 60 * 60 * 24 * 30
 
     if (document.cookie) {
       setCookieAlertOpen(false)
     } else {
       toast.error(
         // eslint-disable-next-line max-len
-        'Файл cookie не может быть установлен! Пожалуйста, разблокируйте этот сайт с помощью настроек cookie вашего браузера..'
+        'Nie można ustawić pliku cookie! Proszę odblokuj tę witrynę za pomocą ustawień plików cookie w przeglądarce...'
       )
     }
   }

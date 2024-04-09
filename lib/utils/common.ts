@@ -170,16 +170,17 @@ export const deleteProductFromLS = <T>(
 
 export const showCountMessage = (count: string, lang: string) => {
   if (count == '11' || count == '12' || count == '13' || count == '14') {
-    return lang === 'ru' ? 'товаров' : 'items'
+    return lang === 'ru' ? 'товаров' : (lang === 'pl' ? 'towarów' : 'items');
   }
 
   if (count.endsWith('1')) {
-    return lang === 'ru' ? 'товар' : 'item'
+    return lang === 'ru' ? 'товар' : (lang === 'pl' ? 'towar' : 'item');
   }
 
   if (count.endsWith('2') || count.endsWith('3') || count.endsWith('4')) {
-    return lang === 'ru' ? 'товара' : 'items'
+    return lang === 'ru' ? 'товара' : (lang === 'pl' ? 'towary' : 'items');
   }
 
-  return lang === 'ru' ? 'товаров' : 'items'
+  return lang === 'ru' ? 'товаров' : (lang === 'pl' ? 'towarów' : 'items');
 }
+
