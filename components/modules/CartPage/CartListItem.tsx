@@ -53,7 +53,7 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
         <div
           className={`${styles.cart__list__item__size} ${styles.cart__list__item__block}`}
         >
-          Размер: {item.size.toUpperCase()}
+          Rozmiar: {item.size.toUpperCase()}
         </div>
       </div>
       <div className={styles.cart__list__item__inner}>
@@ -63,10 +63,10 @@ const CartListItem = ({ item }: { item: ICartItem }) => {
           <span
             className={`${styles.cart__list__item__price} ${styles.cart__list__item__initial__price}`}
           >
-            {formatPrice(+item.price)} ₽
+            {formatPrice(+item.price)} zł
           </span>
           <span className={styles.cart__list__item__initial__text}>
-            Цена за 1 шт.
+            Cena za 1 sztukę.
           </span>
         </div>
         <ProductCounter

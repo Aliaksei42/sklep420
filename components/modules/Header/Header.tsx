@@ -60,7 +60,7 @@ const Header = () => {
     )
 
     if (lang) {
-      if (lang === 'ru' || lang === 'en') {
+      if (lang === 'ru' || lang === 'en' || lang === 'pl') {
         setLang(lang)
       }
     }
