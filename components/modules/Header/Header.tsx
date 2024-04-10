@@ -40,7 +40,6 @@ const Header = () => {
   const { lang, translations } = useLang()
   // const user = useUnit($user)
   const currentFavoritesByAuth = useGoodsByAuth($favorites, $favoritesFromLS)
-  
   const handleOpenMenu = () => {
     addOverflowHiddenToBody()
     openMenu()

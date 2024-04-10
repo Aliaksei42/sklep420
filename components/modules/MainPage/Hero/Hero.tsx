@@ -34,7 +34,7 @@ const Hero = () => {
     },
   ]
 
-  const handleSlideClick = (e: SwiperType) => e.slideTo(e.clickedIndex) 
+  const handleSlideClick = (e: SwiperType) => e.slideTo(e.clickedIndex)
 
   return (
     <section className={styles.hero}>

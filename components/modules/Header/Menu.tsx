@@ -134,7 +134,7 @@ const Menu = () => {
           onClick={handleCloseMenu}
         />
         <div className={`nav-menu__lang ${menuIsOpen ? 'open' : ''}`}>
-        <button
+          <button
             className={`btn-reset nav-menu__lang__btn ${
               lang === 'pl' ? 'lang-active' : ''
             }`}

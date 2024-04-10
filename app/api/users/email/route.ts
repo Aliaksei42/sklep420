@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     )
     return NextResponse.json({ message: 'Success' })
   } catch (err) {
-    console.error('Error sending email:', err); 
+    console.error('Error sending email:', err)
     return NextResponse.json({ message: (err as Error).message })
   }
 }

@@ -29,19 +29,18 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
         <Link
           className='header__links__item__btn header__links__item__btn--cart'
           href='/cart'
-          onMouseEnter={handleShowPopup}  
+          onMouseEnter={handleShowPopup}
         >
-          {!!currentCartByAuth.length && <span className='not-empty' />} 
+          {!!currentCartByAuth.length && <span className='not-empty' />}
         </Link>
         <AnimatePresence>
-
           {open && (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
               className='cart-popup__wrapper'
-              onMouseLeave={handleHidePopup} 
+              onMouseLeave={handleHidePopup}
             >
               <span className='cart-popup__arrow' />
               <button
